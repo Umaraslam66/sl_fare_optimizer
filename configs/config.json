@@ -1,0 +1,34 @@
+{
+    "data_sources": {
+        "stations": "https://api.sl.se/api2/typeahead.json",
+        "schedules": "https://api.sl.se/api2/timetables.json"
+    },
+    "simulation_params": {
+        "peak_hours": {
+            "morning": {
+                "start": "07:00",
+                "end": "09:00"
+            },
+            "evening": {
+                "start": "16:00",
+                "end": "18:00"
+            }
+        },
+        "base_fare": 39,
+        "fare_limits": {
+            "min": 20,
+            "max": 60
+        },
+        "elasticity_default": -0.3
+    },
+    "model_params": {
+        "features": [
+            "time_of_day",
+            "day_of_week",
+            "is_holiday",
+            "weather",
+            "special_event",
+            "current_fare"
+        ]
+    }
+}
